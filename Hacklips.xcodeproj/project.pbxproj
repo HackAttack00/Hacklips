@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DC529B2FCC30066135C /* HacklipsApp.swift */; };
+		39411DC829B2FCC30066135C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DC729B2FCC30066135C /* Persistence.swift */; };
+		39411DCB29B2FCC30066135C /* Hacklips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39411DC929B2FCC30066135C /* Hacklips.xcdatamodeld */; };
+		39411DCD29B2FCC30066135C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DCC29B2FCC30066135C /* ContentView.swift */; };
+		39411DCF29B2FCC30066135C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39411DCE29B2FCC30066135C /* Assets.xcassets */; };
+		39411DD329B2FCC30066135C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39411DD229B2FCC30066135C /* Preview Assets.xcassets */; };
+		39411DDD29B2FCC30066135C /* HacklipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DDC29B2FCC30066135C /* HacklipsTests.swift */; };
+		39411DE729B2FCC40066135C /* HacklipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DE629B2FCC40066135C /* HacklipsUITests.swift */; };
+		39411DE929B2FCC40066135C /* HacklipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DE829B2FCC40066135C /* HacklipsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39411DD929B2FCC30066135C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39411DBA29B2FCC30066135C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39411DC129B2FCC30066135C;
+			remoteInfo = Hacklips;
+		};
+		39411DE329B2FCC30066135C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39411DBA29B2FCC30066135C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39411DC129B2FCC30066135C;
+			remoteInfo = Hacklips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39411DC229B2FCC30066135C /* Hacklips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hacklips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39411DC529B2FCC30066135C /* HacklipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsApp.swift; sourceTree = "<group>"; };
+		39411DC729B2FCC30066135C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		39411DCA29B2FCC30066135C /* Hacklips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hacklips.xcdatamodel; sourceTree = "<group>"; };
+		39411DCC29B2FCC30066135C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		39411DCE29B2FCC30066135C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39411DD029B2FCC30066135C /* Hacklips.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hacklips.entitlements; sourceTree = "<group>"; };
+		39411DD229B2FCC30066135C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		39411DD829B2FCC30066135C /* HacklipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HacklipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39411DDC29B2FCC30066135C /* HacklipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsTests.swift; sourceTree = "<group>"; };
+		39411DE229B2FCC30066135C /* HacklipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HacklipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39411DE629B2FCC40066135C /* HacklipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsUITests.swift; sourceTree = "<group>"; };
+		39411DE829B2FCC40066135C /* HacklipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39411DBF29B2FCC30066135C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39411DD529B2FCC30066135C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39411DDF29B2FCC30066135C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39411DB929B2FCC30066135C = {
+			isa = PBXGroup;
+			children = (
+				39411DC429B2FCC30066135C /* Hacklips */,
+				39411DDB29B2FCC30066135C /* HacklipsTests */,
+				39411DE529B2FCC40066135C /* HacklipsUITests */,
+				39411DC329B2FCC30066135C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39411DC329B2FCC30066135C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39411DC229B2FCC30066135C /* Hacklips.app */,
+				39411DD829B2FCC30066135C /* HacklipsTests.xctest */,
+				39411DE229B2FCC30066135C /* HacklipsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39411DC429B2FCC30066135C /* Hacklips */ = {
+			isa = PBXGroup;
+			children = (
+				39411DC529B2FCC30066135C /* HacklipsApp.swift */,
+				39411DC729B2FCC30066135C /* Persistence.swift */,
+				39411DCC29B2FCC30066135C /* ContentView.swift */,
+				39411DCE29B2FCC30066135C /* Assets.xcassets */,
+				39411DD029B2FCC30066135C /* Hacklips.entitlements */,
+				39411DC929B2FCC30066135C /* Hacklips.xcdatamodeld */,
+				39411DD129B2FCC30066135C /* Preview Content */,
+			);
+			path = Hacklips;
+			sourceTree = "<group>";
+		};
+		39411DD129B2FCC30066135C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				39411DD229B2FCC30066135C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		39411DDB29B2FCC30066135C /* HacklipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				39411DDC29B2FCC30066135C /* HacklipsTests.swift */,
+			);
+			path = HacklipsTests;
+			sourceTree = "<group>";
+		};
+		39411DE529B2FCC40066135C /* HacklipsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				39411DE629B2FCC40066135C /* HacklipsUITests.swift */,
+				39411DE829B2FCC40066135C /* HacklipsUITestsLaunchTests.swift */,
+			);
+			path = HacklipsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39411DC129B2FCC30066135C /* Hacklips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39411DEC29B2FCC40066135C /* Build configuration list for PBXNativeTarget "Hacklips" */;
+			buildPhases = (
+				39411DBE29B2FCC30066135C /* Sources */,
+				39411DBF29B2FCC30066135C /* Frameworks */,
+				39411DC029B2FCC30066135C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hacklips;
+			productName = Hacklips;
+			productReference = 39411DC229B2FCC30066135C /* Hacklips.app */;
+			productType = "com.apple.product-type.application";
+		};
+		39411DD729B2FCC30066135C /* HacklipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39411DEF29B2FCC40066135C /* Build configuration list for PBXNativeTarget "HacklipsTests" */;
+			buildPhases = (
+				39411DD429B2FCC30066135C /* Sources */,
+				39411DD529B2FCC30066135C /* Frameworks */,
+				39411DD629B2FCC30066135C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39411DDA29B2FCC30066135C /* PBXTargetDependency */,
+			);
+			name = HacklipsTests;
+			productName = HacklipsTests;
+			productReference = 39411DD829B2FCC30066135C /* HacklipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		39411DE129B2FCC30066135C /* HacklipsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39411DF229B2FCC40066135C /* Build configuration list for PBXNativeTarget "HacklipsUITests" */;
+			buildPhases = (
+				39411DDE29B2FCC30066135C /* Sources */,
+				39411DDF29B2FCC30066135C /* Frameworks */,
+				39411DE029B2FCC30066135C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39411DE429B2FCC30066135C /* PBXTargetDependency */,
+			);
+			name = HacklipsUITests;
+			productName = HacklipsUITests;
+			productReference = 39411DE229B2FCC30066135C /* HacklipsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39411DBA29B2FCC30066135C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					39411DC129B2FCC30066135C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					39411DD729B2FCC30066135C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 39411DC129B2FCC30066135C;
+					};
+					39411DE129B2FCC30066135C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 39411DC129B2FCC30066135C;
+					};
+				};
+			};
+			buildConfigurationList = 39411DBD29B2FCC30066135C /* Build configuration list for PBXProject "Hacklips" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39411DB929B2FCC30066135C;
+			productRefGroup = 39411DC329B2FCC30066135C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39411DC129B2FCC30066135C /* Hacklips */,
+				39411DD729B2FCC30066135C /* HacklipsTests */,
+				39411DE129B2FCC30066135C /* HacklipsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39411DC029B2FCC30066135C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39411DD329B2FCC30066135C /* Preview Assets.xcassets in Resources */,
+				39411DCF29B2FCC30066135C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39411DD629B2FCC30066135C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39411DE029B2FCC30066135C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39411DBE29B2FCC30066135C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */,
+				39411DC829B2FCC30066135C /* Persistence.swift in Sources */,
+				39411DCD29B2FCC30066135C /* ContentView.swift in Sources */,
+				39411DCB29B2FCC30066135C /* Hacklips.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39411DD429B2FCC30066135C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39411DDD29B2FCC30066135C /* HacklipsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39411DDE29B2FCC30066135C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39411DE929B2FCC40066135C /* HacklipsUITestsLaunchTests.swift in Sources */,
+				39411DE729B2FCC40066135C /* HacklipsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39411DDA29B2FCC30066135C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39411DC129B2FCC30066135C /* Hacklips */;
+			targetProxy = 39411DD929B2FCC30066135C /* PBXContainerItemProxy */;
+		};
+		39411DE429B2FCC30066135C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39411DC129B2FCC30066135C /* Hacklips */;
+			targetProxy = 39411DE329B2FCC30066135C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39411DEA29B2FCC40066135C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		39411DEB29B2FCC40066135C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		39411DED29B2FCC40066135C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hacklips/Hacklips.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hacklips/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackAttack.Hacklips;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		39411DEE29B2FCC40066135C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hacklips/Hacklips.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hacklips/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackAttack.Hacklips;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		39411DF029B2FCC40066135C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackAttack.HacklipsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hacklips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hacklips";
+			};
+			name = Debug;
+		};
+		39411DF129B2FCC40066135C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackAttack.HacklipsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hacklips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hacklips";
+			};
+			name = Release;
+		};
+		39411DF329B2FCC40066135C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackAttack.HacklipsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hacklips;
+			};
+			name = Debug;
+		};
+		39411DF429B2FCC40066135C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackAttack.HacklipsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hacklips;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39411DBD29B2FCC30066135C /* Build configuration list for PBXProject "Hacklips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39411DEA29B2FCC40066135C /* Debug */,
+				39411DEB29B2FCC40066135C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39411DEC29B2FCC40066135C /* Build configuration list for PBXNativeTarget "Hacklips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39411DED29B2FCC40066135C /* Debug */,
+				39411DEE29B2FCC40066135C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39411DEF29B2FCC40066135C /* Build configuration list for PBXNativeTarget "HacklipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39411DF029B2FCC40066135C /* Debug */,
+				39411DF129B2FCC40066135C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39411DF229B2FCC40066135C /* Build configuration list for PBXNativeTarget "HacklipsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39411DF329B2FCC40066135C /* Debug */,
+				39411DF429B2FCC40066135C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		39411DC929B2FCC30066135C /* Hacklips.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				39411DCA29B2FCC30066135C /* Hacklips.xcdatamodel */,
+			);
+			currentVersion = 39411DCA29B2FCC30066135C /* Hacklips.xcdatamodel */;
+			path = Hacklips.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 39411DBA29B2FCC30066135C /* Project object */;
+}
