@@ -33,12 +33,36 @@ struct clipMenuBarExtraView: View {
         
         Divider()
 
-        Button(action: action3, label: { Text("Action 3") })
+        Button(action: editClipBoard, label: { Text("Edit Clips") })
     }
     
-    func action1() {}
-    func action2() {}
-    func action3() {}
+    func action1() {
+        if let lastPastedString = getLastCopiedString() {
+            print("lastPastedString = \(lastPastedString)")
+        }
+    }
+    
+    func action2() {
+        
+    }
+    
+    func editClipBoard() {
+        //클립보드 수정 페이지를 보여준다
+    }
 
+    func getLastCopiedString() -> String? {
+        let pboard = NSPasteboard.general
+        
+        var lastCopiedString:String? = nil
+        if let items = pboard.pasteboardItems {
+            items.forEach { item in
+                if let pasteString = item.string(forType: NSPasteboard.PasteboardType.string) {
+                    lastCopiedString = pasteString
+                }
+            }
+            return lastCopiedString
+        }
+        return nil
+    }
 }
     
