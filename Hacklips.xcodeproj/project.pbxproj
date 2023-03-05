@@ -16,6 +16,10 @@
 		39411DDD29B2FCC30066135C /* HacklipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DDC29B2FCC30066135C /* HacklipsTests.swift */; };
 		39411DE729B2FCC40066135C /* HacklipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DE629B2FCC40066135C /* HacklipsUITests.swift */; };
 		39411DE929B2FCC40066135C /* HacklipsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DE829B2FCC40066135C /* HacklipsUITestsLaunchTests.swift */; };
+		397E407E29B4CBA3006651B8 /* ClipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E407D29B4CBA3006651B8 /* ClipsData.swift */; };
+		397E408029B4CF9D006651B8 /* ClipsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E407F29B4CF9D006651B8 /* ClipsMainView.swift */; };
+		397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E408529B4D3E4006651B8 /* DetailClipView.swift */; };
+		397E408829B4D890006651B8 /* ClipMenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E408729B4D890006651B8 /* ClipMenuBarExtraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		39411DE229B2FCC30066135C /* HacklipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HacklipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39411DE629B2FCC40066135C /* HacklipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsUITests.swift; sourceTree = "<group>"; };
 		39411DE829B2FCC40066135C /* HacklipsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		397E407D29B4CBA3006651B8 /* ClipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsData.swift; sourceTree = "<group>"; };
+		397E407F29B4CF9D006651B8 /* ClipsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsMainView.swift; sourceTree = "<group>"; };
+		397E408529B4D3E4006651B8 /* DetailClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailClipView.swift; sourceTree = "<group>"; };
+		397E408729B4D890006651B8 /* ClipMenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipMenuBarExtraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,10 @@
 		39411DC429B2FCC30066135C /* Hacklips */ = {
 			isa = PBXGroup;
 			children = (
-				39411DC529B2FCC30066135C /* HacklipsApp.swift */,
-				39411DC729B2FCC30066135C /* Persistence.swift */,
-				39411DCC29B2FCC30066135C /* ContentView.swift */,
+				397E408329B4CFCD006651B8 /* App */,
+				397E408229B4CFBD006651B8 /* Data */,
+				397E408129B4CFA6006651B8 /* View */,
+				397E408429B4CFFF006651B8 /* Useless */,
 				39411DCE29B2FCC30066135C /* Assets.xcassets */,
 				39411DD029B2FCC30066135C /* Hacklips.entitlements */,
 				39411DC929B2FCC30066135C /* Hacklips.xcdatamodeld */,
@@ -133,6 +142,41 @@
 				39411DE829B2FCC40066135C /* HacklipsUITestsLaunchTests.swift */,
 			);
 			path = HacklipsUITests;
+			sourceTree = "<group>";
+		};
+		397E408129B4CFA6006651B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				397E407F29B4CF9D006651B8 /* ClipsMainView.swift */,
+				397E408529B4D3E4006651B8 /* DetailClipView.swift */,
+				397E408729B4D890006651B8 /* ClipMenuBarExtraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		397E408229B4CFBD006651B8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				397E407D29B4CBA3006651B8 /* ClipsData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		397E408329B4CFCD006651B8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				39411DC529B2FCC30066135C /* HacklipsApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		397E408429B4CFFF006651B8 /* Useless */ = {
+			isa = PBXGroup;
+			children = (
+				39411DCC29B2FCC30066135C /* ContentView.swift */,
+				39411DC729B2FCC30066135C /* Persistence.swift */,
+			);
+			path = Useless;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397E407E29B4CBA3006651B8 /* ClipsData.swift in Sources */,
+				397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */,
 				39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */,
 				39411DC829B2FCC30066135C /* Persistence.swift in Sources */,
 				39411DCD29B2FCC30066135C /* ContentView.swift in Sources */,
 				39411DCB29B2FCC30066135C /* Hacklips.xcdatamodeld in Sources */,
+				397E408829B4D890006651B8 /* ClipMenuBarExtraView.swift in Sources */,
+				397E408029B4CF9D006651B8 /* ClipsMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
