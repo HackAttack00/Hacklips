@@ -39,8 +39,8 @@ class ClipboardWatcher: NSObject {
     func handleClipboardChange(text: String) {
         print("handleClipboardChange = \(text)")
         //세이브를 어떻게 호출하라는거야
-//        Task(priority: .high) {
-//            await ClipsData().saveClip(clipText: text)
-//        }
+        Task(priority: .high) {
+            await ClipsData.shared.saveClip(clipText: text)
+        }
     }
 }

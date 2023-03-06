@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ClipsMainView: View {    
     @Environment(\.managedObjectContext) var dbContext
-
-    @FetchRequest(sortDescriptors: [], predicate: nil, animation: .default) private var listOfClips: FetchedResults<Clips>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: true)], predicate: nil, animation: .default)
+    private var listOfClips: FetchedResults<Clips>
     
     var body: some View {
         NavigationStack {
@@ -46,24 +46,15 @@ struct ClipsMainView: View {
         if let lastPastedString = ClipsData.getLastCopiedString() {
             print("lastPastedString = \(lastPastedString)")
             
-            Task(priority: .high) {
-                await saveClip(clipText: lastPastedString)
-            }
+            saveClip(clipText: lastPastedString)
         } else {
             print("no clip!")
         }
     }
     
-    func saveClip(clipText: String) async {
-        await dbContext.perform {
-            let newClip = Clips(context: dbContext)
-            newClip.pastedText = clipText
-            
-            do {
-                try dbContext.save()
-            } catch {
-                print("Error saving clip")
-            }
+    func saveClip(clipText: String) {
+        Task(priority: .high) {
+            await ClipsData.shared.saveClip(clipText: clipText)
         }
     }
 }

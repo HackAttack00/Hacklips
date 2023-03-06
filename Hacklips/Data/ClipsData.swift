@@ -9,9 +9,11 @@ import CoreData
 import AppKit
 
 class ClipsData: ObservableObject {
+    static let shared = ClipsData()
+    
     let container: NSPersistentCloudKitContainer
     
-    init() {
+    private init() {
         container = NSPersistentCloudKitContainer(name: "Hacklips")
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores { storeDescription, error in
@@ -34,5 +36,18 @@ class ClipsData: ObservableObject {
             return lastCopiedString
         }
         return nil
+    }
+    
+    func saveClip(clipText: String) async {
+        await self.container.viewContext.perform {
+            let newClip = Clips(context: self.container.viewContext)
+            newClip.pastedText = clipText
+            
+            do {
+                try self.container.viewContext.save()
+            } catch {
+                print("Error saving clip")
+            }
+        }
     }
 }

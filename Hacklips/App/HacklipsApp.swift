@@ -9,8 +9,7 @@ import SwiftUI
 
 @main
 struct HacklipsApp: App {
-    @StateObject var clipsData = ClipsData()
-    @State var currentNumber: String = "1"
+    @StateObject var clipsData = ClipsData.shared
     
     var body: some Scene {
         
