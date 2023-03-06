@@ -20,6 +20,7 @@
 		397E408029B4CF9D006651B8 /* ClipsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E407F29B4CF9D006651B8 /* ClipsMainView.swift */; };
 		397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E408529B4D3E4006651B8 /* DetailClipView.swift */; };
 		397E408829B4D890006651B8 /* ClipMenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E408729B4D890006651B8 /* ClipMenuBarExtraView.swift */; };
+		39E1522829B627D800419334 /* ClipboardWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1522729B627D800419334 /* ClipboardWatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		397E407F29B4CF9D006651B8 /* ClipsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsMainView.swift; sourceTree = "<group>"; };
 		397E408529B4D3E4006651B8 /* DetailClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailClipView.swift; sourceTree = "<group>"; };
 		397E408729B4D890006651B8 /* ClipMenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipMenuBarExtraView.swift; sourceTree = "<group>"; };
+		39E1522729B627D800419334 /* ClipboardWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardWatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				397E407D29B4CBA3006651B8 /* ClipsData.swift */,
+				39E1522729B627D800419334 /* ClipboardWatcher.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E1522829B627D800419334 /* ClipboardWatcher.swift in Sources */,
 				397E407E29B4CBA3006651B8 /* ClipsData.swift in Sources */,
 				397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */,
 				39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */,

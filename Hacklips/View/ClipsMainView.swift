@@ -34,6 +34,9 @@ struct ClipsMainView: View {
                     }
                 }
             }
+        }.onAppear {
+            let watcher = ClipboardWatcher()
+            watcher.startWatcher()
         }
     }
     
