@@ -15,6 +15,8 @@ struct HacklipsApp: App {
         
         MenuBarExtra("Hacklips", systemImage: "hammer") {
             ClipMenuBarExtraView()
+                .environmentObject(clipsData)
+                .environment(\.managedObjectContext, clipsData.container.viewContext)
         }
         
         WindowGroup {

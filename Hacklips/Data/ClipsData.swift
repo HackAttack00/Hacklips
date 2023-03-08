@@ -42,11 +42,22 @@ class ClipsData: ObservableObject {
         await self.container.viewContext.perform {
             let newClip = Clips(context: self.container.viewContext)
             newClip.pastedText = clipText
-            
+            newClip.timestamp = Date()
             do {
                 try self.container.viewContext.save()
             } catch {
                 print("Error saving clip")
+            }
+        }
+    }
+    
+    func eraseClip(clip: Clips) async{
+        await self.container.viewContext.perform {
+            self.container.viewContext.delete(clip)
+            do {
+                try self.container.viewContext.save()
+            } catch {
+                print("Error delete clip")
             }
         }
     }

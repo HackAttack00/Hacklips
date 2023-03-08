@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct ClipMenuBarExtraView: View {
+    @Environment(\.managedObjectContext) var dbContext
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
+    private var listOfClips: FetchedResults<Clips>
+    
     var body: some View {
         Button(action: action1, label: { Text("Action 1") })
         Button(action: action2, label: { Text("Action 2") })
-        
+//        List {
+//            ForEach(listOfClips) { clip in
+//                Button(action: action1, label: { Text("\(clip.pastedText ?? "")") })
+//            }.bold()
+//        }
         Divider()
 
         Button(action: editClipBoard, label: { Text("Edit Clips") })
