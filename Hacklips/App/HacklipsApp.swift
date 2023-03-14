@@ -14,14 +14,12 @@ struct HacklipsApp: App {
     var body: some Scene {
         
         MenuBarExtra("Hacklips", systemImage: "hammer") {
-            ClipMenuBarExtraView()
-                .environmentObject(clipsData)
+            ExtraViewClipListView()
                 .environment(\.managedObjectContext, clipsData.container.viewContext)
         }
         
         WindowGroup {
             ClipsMainView()
-                .environmentObject(clipsData)
                 .environment(\.managedObjectContext, clipsData.container.viewContext)
         }
     }

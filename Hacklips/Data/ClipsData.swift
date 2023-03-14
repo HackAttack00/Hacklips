@@ -7,6 +7,7 @@
 
 import CoreData
 import AppKit
+import SwiftUI
 
 class ClipsData: ObservableObject {
     static let shared = ClipsData()
