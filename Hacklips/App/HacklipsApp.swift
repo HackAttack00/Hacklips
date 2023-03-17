@@ -12,14 +12,13 @@ struct HacklipsApp: App {
     @StateObject var clipsData = ClipsData.shared
     
     var body: some Scene {
-        
-        MenuBarExtra("Hacklips", systemImage: "hammer") {
-            ExtraViewClipListView()
+        WindowGroup {
+            ClipsMainView()
                 .environment(\.managedObjectContext, clipsData.container.viewContext)
         }
         
-        WindowGroup {
-            ClipsMainView()
+        MenuBarExtra("menu", systemImage: "hammer") {
+            ExtraViewClipListView(listOfClips: ExtraClips())
                 .environment(\.managedObjectContext, clipsData.container.viewContext)
         }
     }

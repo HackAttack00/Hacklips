@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39168F3C29C4A7EC00E68D91 /* ExtraClips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39168F3B29C4A7EC00E68D91 /* ExtraClips.swift */; };
 		39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DC529B2FCC30066135C /* HacklipsApp.swift */; };
 		39411DC829B2FCC30066135C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39411DC729B2FCC30066135C /* Persistence.swift */; };
 		39411DCB29B2FCC30066135C /* Hacklips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39411DC929B2FCC30066135C /* Hacklips.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39168F3B29C4A7EC00E68D91 /* ExtraClips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraClips.swift; sourceTree = "<group>"; };
 		39411DC229B2FCC30066135C /* Hacklips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hacklips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39411DC529B2FCC30066135C /* HacklipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacklipsApp.swift; sourceTree = "<group>"; };
 		39411DC729B2FCC30066135C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -150,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				397E407F29B4CF9D006651B8 /* ClipsMainView.swift */,
-				397E408529B4D3E4006651B8 /* DetailClipView.swift */,
 				3988FCD129C0DBE600FA904E /* ExtraViewClipListView.swift */,
+				397E408529B4D3E4006651B8 /* DetailClipView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +161,7 @@
 		397E408229B4CFBD006651B8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				39168F3B29C4A7EC00E68D91 /* ExtraClips.swift */,
 				397E407D29B4CBA3006651B8 /* ClipsData.swift */,
 				39E1522729B627D800419334 /* ClipboardWatcher.swift */,
 			);
@@ -314,6 +317,7 @@
 			files = (
 				39E1522829B627D800419334 /* ClipboardWatcher.swift in Sources */,
 				397E407E29B4CBA3006651B8 /* ClipsData.swift in Sources */,
+				39168F3C29C4A7EC00E68D91 /* ExtraClips.swift in Sources */,
 				397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */,
 				39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */,
 				39411DC829B2FCC30066135C /* Persistence.swift in Sources */,
