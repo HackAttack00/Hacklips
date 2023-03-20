@@ -11,10 +11,9 @@ import SwiftUI
 
 class ClipsData: ObservableObject {
     static let shared = ClipsData()
-    
     let container: NSPersistentCloudKitContainer
     
-    private init() {
+    init() {
         container = NSPersistentCloudKitContainer(name: "Hacklips")
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores { storeDescription, error in

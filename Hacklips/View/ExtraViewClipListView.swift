@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ExtraViewClipListView: View {
     @Environment(\.managedObjectContext) var dbContext
-//    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
-//    private var listOfClips: FetchedResults<Clips>
-    
-//    @State var listOfClips: [Clips]
-    @StateObject var listOfClips = ExtraClips()
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
+    private var listOfClips: FetchedResults<Clips>
+
     var body: some View {
         VStack {
-            List((listOfClips.clips?.reversed())!) { clip in
+            List(listOfClips) { clip in
                 Button(clip.pastedText ?? "") {
                     action1()
                 }.keyboardShortcut("a")
@@ -28,14 +26,6 @@ struct ExtraViewClipListView: View {
                 clip.pastedText = "abc"
                 clip.timestamp = Date()
                 try? dbContext.save()
-            }
-            
-            Button("refesh list") {
-                let list = fetchAll()
-                _ = list.map { clips in
-                    listOfClips.appendClip(pastedText: clips.pastedText, timestamp: clips.timestamp)
-                    //print(clips.pastedText ?? "없어?")
-                }
             }
         }.onAppear {
             print("onAppear called")

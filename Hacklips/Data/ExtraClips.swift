@@ -31,6 +31,4 @@ class ExtraClip: Identifiable {
         self.pastedText = pastedText
         self.timestamp = timestamp
     }
-    
-
 }
