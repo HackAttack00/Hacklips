@@ -25,7 +25,7 @@ struct HacklipsApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     
-    @StateObject var clipsData = ClipsData.shared
+    var clipsData = ClipsData.shared
     private var statusItem: NSStatusItem!
     private var popover: NSPopover!
     
