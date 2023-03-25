@@ -15,8 +15,9 @@ struct ExtraViewClipListView: View {
     var body: some View {
         VStack {
             List(listOfClips) { clip in
-                Button(clip.pastedText ?? "") {
-                    action1()
+                let pastedText = clip.pastedText ?? ""
+                Button(pastedText) {
+                    copyToClipBoard(clipText: pastedText)
                 }.keyboardShortcut("a")
             }
             
@@ -49,8 +50,11 @@ struct ExtraViewClipListView: View {
         }
     }
     
-    func action1() {
-        print("action1")
+    func copyToClipBoard(clipText: String) {
+        print("copyToClipBoard = \(clipText)")
+        let pasteBoard = NSPasteboard.general
+        pasteBoard.clearContents()
+        pasteBoard.writeObjects([clipText as NSString])
     }
     
     func editClipBoard() {
