@@ -20,14 +20,6 @@ struct ExtraViewClipListView: View {
                     copyToClipBoard(clipText: pastedText)
                 }.keyboardShortcut("a")
             }
-            
-            Divider()
-            Button("Add") {
-                let clip = Clips(context: dbContext)
-                clip.pastedText = "abc"
-                clip.timestamp = Date()
-                try? dbContext.save()
-            }
         }.onAppear {
             print("onAppear called")
 //            if let extraClips = listOfClips.clips {

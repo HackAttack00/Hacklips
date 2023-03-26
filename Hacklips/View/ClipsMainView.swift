@@ -12,10 +12,14 @@ struct ClipsMainView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
     private var listOfClips: FetchedResults<Clips>
     
+    @State private var selectedClip: Clips? = nil
+    @State var index: Int = 0
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(listOfClips) { clip in
+//                ForEach(listOfClips) { clip in
+                ForEach(Array(zip(0..<listOfClips.count, listOfClips)), id: \.0) { index, clip in
                     NavigationLink {
                         VStack {
                             HStack {
@@ -25,21 +29,21 @@ struct ClipsMainView: View {
                             Spacer(minLength: 10)
                         }
                     } label: {
-                        RowClip(clip: clip)
+                        RowClip(clip: clip) {
+                            self.setSelectedClip(index: index)
+                        }
                     }
                 }
             }
             .toolbar {
-                //ios분기
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    NavigationLink(destination: DetailClipView()) {
-//                        Image(systemName: "plus")
-//                    }
-//                }
-                
                 ToolbarItem {
-                    Button(action: deleteAllClips) {
-                        Label("Delete all clips", systemImage: "trash")
+                    HStack {
+                        Button(action: deleteAllClips) {
+                            Label("deleteSelectedClip clips", systemImage: "trash")
+                        }
+                        Button(action: deleteSelectedClip) {
+                            Label("deleteSelectedClip clips", systemImage: "trash.circle.fill")
+                        }
                     }
                 }
             }
@@ -47,6 +51,10 @@ struct ClipsMainView: View {
             let watcher = ClipboardWatcher()
             watcher.startWatcher()
         }
+    }
+    
+    private func setSelectedClip(index:Int) {
+        self.selectedClip = self.listOfClips[index]
     }
     
     private func addClip() {
@@ -63,10 +71,23 @@ struct ClipsMainView: View {
     
     private func deleteAllClips() {
         print("clip 모두 삭제")
-        
         listOfClips.forEach({ clip in
             eraseClip(clip: clip)
         })
+    }
+    
+    private func deleteSelectedClip() {
+//        if let selectedClip = self.selectedClip {
+//            Task(priority: .high) {
+//                await ClipsData.shared.eraseClip(clip: selectedClip)
+//            }
+//        }
+        
+        Task(priority: .high) {
+            
+            let clip = listOfClips[0]
+            await ClipsData.shared.eraseClip(clip:clip)
+        }
     }
     
     func saveClip(clipText: String) {
@@ -84,13 +105,20 @@ struct ClipsMainView: View {
 
 struct RowClip: View {
     let clip: Clips
+    var action:() -> Void
+    
     @State var clipTitle = ""
     @State var maxOffset = 19
+    
     var body: some View {
         HStack {
             Text(self.clipTitle)
                 .bold()
-        }.onAppear {
+        }
+        .onTapGesture {
+            self.action()
+        }
+        .onAppear {
             if let pastedText = clip.pastedText {
                 if pastedText.count < 20 {
                     self.maxOffset = pastedText.count - 1
