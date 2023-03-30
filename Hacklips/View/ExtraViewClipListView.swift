@@ -11,23 +11,13 @@ struct ExtraViewClipListView: View {
     @Environment(\.managedObjectContext) var dbContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
     private var listOfClips: FetchedResults<Clips>
-
+    
     var body: some View {
-        VStack {
-            List(listOfClips) { clip in
-                let pastedText = clip.pastedText ?? ""
-                Button(pastedText) {
-                    copyToClipBoard(clipText: pastedText)
-                }.keyboardShortcut("a")
+        ForEach(listOfClips.indices, id: \.self) { index in
+            let pastedText = listOfClips[index].pastedText ?? ""
+            Button(pastedText) {
+                copyToClipBoard(clipText: pastedText)
             }
-        }.onAppear {
-            print("onAppear called")
-//            if let extraClips = listOfClips.clips {
-//                _ = extraClips.map { extraClip in
-//                    print(extraClip.pastedText ?? "없어?")
-//
-//                }
-//            }
         }
     }
     
@@ -51,6 +41,16 @@ struct ExtraViewClipListView: View {
     
     func editClipBoard() {
         //클립보드 수정 페이지를 보여준다
+    }
+}
+
+extension View {
+    func customShortcut(index: Int) -> some View {
+        if index < 10 {
+            return self.keyboardShortcut(KeyEquivalent(Character(String(index))))
+        } else {
+            return self.keyboardShortcut(KeyEquivalent(Character(String(0))))
+        }
     }
 }
 

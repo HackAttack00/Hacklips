@@ -17,9 +17,8 @@ struct ClipsMainView: View {
     
     var body: some View {
         NavigationView {
-            List {
-//                ForEach(listOfClips) { clip in
-                ForEach(Array(zip(0..<listOfClips.count, listOfClips)), id: \.0) { index, clip in
+            List (listOfClips, id: \.self, selection: $selectedClip) { clip in
+  //              ForEach(listOfClips) { clip in
                     NavigationLink {
                         VStack {
                             HStack {
@@ -29,11 +28,9 @@ struct ClipsMainView: View {
                             Spacer(minLength: 10)
                         }
                     } label: {
-                        RowClip(clip: clip) {
-                            self.setSelectedClip(index: index)
-                        }
+                        RowClip(clip: clip)
                     }
-                }
+//                }
             }
             .toolbar {
                 ToolbarItem {
@@ -77,16 +74,10 @@ struct ClipsMainView: View {
     }
     
     private func deleteSelectedClip() {
-//        if let selectedClip = self.selectedClip {
-//            Task(priority: .high) {
-//                await ClipsData.shared.eraseClip(clip: selectedClip)
-//            }
-//        }
-        
-        Task(priority: .high) {
-            
-            let clip = listOfClips[0]
-            await ClipsData.shared.eraseClip(clip:clip)
+        if let selectedClip = self.selectedClip {
+            Task(priority: .high) {
+                await ClipsData.shared.eraseClip(clip: selectedClip)
+            }
         }
     }
     
@@ -105,8 +96,6 @@ struct ClipsMainView: View {
 
 struct RowClip: View {
     let clip: Clips
-    var action:() -> Void
-    
     @State var clipTitle = ""
     @State var maxOffset = 19
     
@@ -115,9 +104,7 @@ struct RowClip: View {
             Text(self.clipTitle)
                 .bold()
         }
-        .onTapGesture {
-            self.action()
-        }
+        .keyboardShortcut("s")
         .onAppear {
             if let pastedText = clip.pastedText {
                 if pastedText.count < 20 {

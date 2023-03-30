@@ -39,6 +39,7 @@ class ClipsData: ObservableObject {
     }
     
     func saveClip(clipText: String) async {
+        await self.eraseClip(searchString: clipText)
         await self.container.viewContext.perform {
             let newClip = Clips(context: self.container.viewContext)
             newClip.pastedText = clipText
@@ -51,13 +52,28 @@ class ClipsData: ObservableObject {
         }
     }
     
-    func eraseClip(clip: Clips) async{
+    func eraseClip(clip: Clips) async {
         await self.container.viewContext.perform {
             self.container.viewContext.delete(clip)
             do {
                 try self.container.viewContext.save()
             } catch {
                 print("Error delete clip")
+            }
+        }
+    }
+    
+    func eraseClip(searchString: String) async {
+        await self.container.viewContext.perform {
+            let fetchRequest: NSFetchRequest<Clips> = Clips.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "pastedText CONTAINS %@", searchString)
+
+            let context = self.container.viewContext
+            if let results = try? context.fetch(fetchRequest) {
+                for result in results {
+                    context.delete(result)
+                }
+                try? context.save()
             }
         }
     }
