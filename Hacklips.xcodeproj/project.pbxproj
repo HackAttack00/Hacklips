@@ -21,6 +21,8 @@
 		397E408029B4CF9D006651B8 /* ClipsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E407F29B4CF9D006651B8 /* ClipsMainView.swift */; };
 		397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E408529B4D3E4006651B8 /* DetailClipView.swift */; };
 		3988FCD229C0DBE600FA904E /* ExtraViewClipListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3988FCD129C0DBE600FA904E /* ExtraViewClipListView.swift */; };
+		399819AC29D93D5D00148C27 /* Clips+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399819AA29D93D5D00148C27 /* Clips+CoreDataClass.swift */; };
+		399819AD29D93D5D00148C27 /* Clips+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399819AB29D93D5D00148C27 /* Clips+CoreDataProperties.swift */; };
 		39E1522829B627D800419334 /* ClipboardWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1522729B627D800419334 /* ClipboardWatcher.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		397E407F29B4CF9D006651B8 /* ClipsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsMainView.swift; sourceTree = "<group>"; };
 		397E408529B4D3E4006651B8 /* DetailClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailClipView.swift; sourceTree = "<group>"; };
 		3988FCD129C0DBE600FA904E /* ExtraViewClipListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewClipListView.swift; sourceTree = "<group>"; };
+		399819AA29D93D5D00148C27 /* Clips+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clips+CoreDataClass.swift"; sourceTree = "<group>"; };
+		399819AB29D93D5D00148C27 /* Clips+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clips+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		39E1522729B627D800419334 /* ClipboardWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardWatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +95,8 @@
 		39411DB929B2FCC30066135C = {
 			isa = PBXGroup;
 			children = (
+				399819AA29D93D5D00148C27 /* Clips+CoreDataClass.swift */,
+				399819AB29D93D5D00148C27 /* Clips+CoreDataProperties.swift */,
 				39411DC429B2FCC30066135C /* Hacklips */,
 				39411DDB29B2FCC30066135C /* HacklipsTests */,
 				39411DE529B2FCC40066135C /* HacklipsUITests */,
@@ -315,8 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				399819AC29D93D5D00148C27 /* Clips+CoreDataClass.swift in Sources */,
 				39E1522829B627D800419334 /* ClipboardWatcher.swift in Sources */,
 				397E407E29B4CBA3006651B8 /* ClipsData.swift in Sources */,
+				399819AD29D93D5D00148C27 /* Clips+CoreDataProperties.swift in Sources */,
 				39168F3C29C4A7EC00E68D91 /* ExtraClips.swift in Sources */,
 				397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */,
 				39411DC629B2FCC30066135C /* HacklipsApp.swift in Sources */,

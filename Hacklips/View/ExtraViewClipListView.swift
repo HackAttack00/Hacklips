@@ -18,6 +18,7 @@ struct ExtraViewClipListView: View {
             Button(pastedText) {
                 copyToClipBoard(clipText: pastedText)
             }
+            .customShortcut(index: index)
         }
     }
     
@@ -45,11 +46,12 @@ struct ExtraViewClipListView: View {
 }
 
 extension View {
+    @ViewBuilder
     func customShortcut(index: Int) -> some View {
-        if index < 10 {
-            return self.keyboardShortcut(KeyEquivalent(Character(String(index))))
+        if index < 9 {
+            self.keyboardShortcut(KeyEquivalent(Character(String(index+1))))
         } else {
-            return self.keyboardShortcut(KeyEquivalent(Character(String(0))))
+            self
         }
     }
 }

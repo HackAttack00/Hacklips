@@ -77,4 +77,50 @@ class ClipsData: ObservableObject {
             }
         }
     }
+    
+    func savePin(clipText: String) async {
+        await self.eraseClip(searchString: clipText)
+        let managedContext = self.container.viewContext
+        await managedContext.perform {
+            let newClip = Clips(context: managedContext)
+            newClip.pastedText = clipText
+            newClip.timestamp = Date()
+            newClip.pinned = true
+            do {
+                try self.container.viewContext.save()
+            } catch {
+                print("Error savePin")
+            }
+        }
+    }
+    
+    func erasePin(clipText: String) async {
+        await self.eraseClip(searchString: clipText)
+        let managedContext = self.container.viewContext
+        await managedContext.perform {
+            let newClip = Clips(context: managedContext)
+            newClip.pastedText = clipText
+            newClip.timestamp = Date()
+            newClip.pinned = false
+            do {
+                try self.container.viewContext.save()
+            } catch {
+                print("Error erasePin")
+            }
+        }
+    }
+    
+//    func fetchClip(withPastedText pastedText: String) -> Any? {
+//        let managedContext = self.container.viewContext
+//        let fetchRequest: NSFetchRequest<Clips> = Clips.fetchRequest()
+//        fetchRequest.predicate = NSPredicate(format: "pastedText CONTAINS %@", pastedText)
+//
+//        do {
+//            let results = try managedContext.fetch(fetchRequest)
+//            return results.first
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//            return nil
+//        }
+//    }
 }

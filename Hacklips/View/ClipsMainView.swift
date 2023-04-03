@@ -97,25 +97,55 @@ struct ClipsMainView: View {
 struct RowClip: View {
     let clip: Clips
     @State var clipTitle = ""
+    @State var clipPinned = false
     @State var maxOffset = 19
     
     var body: some View {
         HStack {
             Text(self.clipTitle)
                 .bold()
+            Spacer()
+            Button(action: togglePin(pastedText: clip.pastedText ?? "")) {
+                if self.clipPinned {
+                    Image(systemName: "pin.fill")
+                        .imageScale(.small)
+                } else {
+                    Image(systemName: "pin")
+                        .imageScale(.small)
+                }
+            }
         }
-        .keyboardShortcut("s")
         .onAppear {
             if let pastedText = clip.pastedText {
                 if pastedText.count < 20 {
                     self.maxOffset = pastedText.count - 1
                 }
                 
-                let endIndex = pastedText.index(pastedText.startIndex, offsetBy: self.maxOffset)
-                let range = ...endIndex
-                self.clipTitle = String(pastedText[range])
+                if pastedText.count != 0 {
+                    let endIndex = pastedText.index(pastedText.startIndex, offsetBy: self.maxOffset)
+                    let range = ...endIndex
+                    self.clipTitle = String(pastedText[range])
+                    self.clipPinned = clip.pinned
+                } else {
+                    self.clipTitle = ""
+                }
             }
         }
+        
+    }
+    
+    func togglePin(pastedText:String) ->() ->() {
+        return {
+            Task(priority: .high) {
+                if self.clipPinned {
+                    await ClipsData.shared.erasePin(clipText: pastedText)
+                } else {
+                    await ClipsData.shared.savePin(clipText:pastedText)
+                }
+            }
+            print(pastedText)
+        }
+
     }
 }
 
