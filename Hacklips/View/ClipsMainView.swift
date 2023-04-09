@@ -16,7 +16,7 @@ struct ClipsMainView: View {
     
     @State private var selectedClip: Clips? = nil
     @State var index: Int = 0
-    let hotkey1 = HotKey(key: .m, modifiers: [.control, .command])
+    let hotkey1 = HotKey(key: .one, modifiers: [.control, .command])
     
     var body: some View {
         NavigationView {
