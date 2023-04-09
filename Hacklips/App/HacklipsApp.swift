@@ -29,40 +29,40 @@ struct HacklipsApp: App {
         }
     }
 }
-
+//
 //class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
 //
-//    var clipsData = ClipsData.shared
-//    private var statusItem: NSStatusItem!
-//    private var popover: NSPopover!
-    
+//    var hotKey: EventHotKeyRef?
 //    @MainActor
-//    func applicationDidFinishLaunching(_ notification: Notification) {
-//        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+//    func applicationDidFinishLaunching(_ aNotification: Notification) {
+//        hotKey = createHotKey(key: kVK_ANSI_C, modifiers: [.command, .shift], handler: {
+//            print("Global shortcut pressed!")
+//        })
+//    }
 //
-//        if let statusButton = statusItem.button {
-//            statusButton.image = NSImage(systemSymbolName: "chart.line.uptrend.xyaxis.circle", accessibilityDescription: "swift")
-//            statusButton.action = #selector(togglePopover)
+//    func createHotKey(key: Int, modifiers: NSEvent.ModifierFlags, handler: @escaping () -> Void) -> EventHotKeyRef? {
+//        let eventHandler: EventHandlerUPP = {(_, _, eventRef) -> OSStatus in
+//            handler()
+//            return noErr
 //        }
 //
+//        var eventType = EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: OSType(kEventHotKeyPressed))
+//        let status = RegisterEventHotKey(UInt32(key), UInt32(modifiers.rawValue), EventHotKeyID(signature: 0, id: 1), GetApplicationEventTarget(), 0, &hotKey)
+//        if status != noErr {
+//            return nil
+//        }
 //
-//        let extraViewClipListView = ExtraViewClipListView()
-//                            .environment(\.managedObjectContext, clipsData.container.viewContext)
+//        let context = UnsafeMutableRawPointer(Unmanaged.passUnretained(hotKey).toOpaque())
+//        InstallEventHandler(GetEventDispatcherTarget(), eventHandler, 1, &eventType, context, nil)
 //
-//        self.popover = NSPopover()
-//        self.popover.contentSize = NSSize(width:300, height: 300)
-//        self.popover.behavior = .transient
-//        self.popover.contentViewController = NSHostingController(rootView: extraViewClipListView)
+//        return hotKey
 //    }
-    
-//    @objc func togglePopover() {
 //
-//        if let button = statusItem.button {
-//            if popover.isShown {
-//                self.popover.performClose(nil)
-//            } else {
-//                popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-//            }
+//    func applicationWillTerminate(_ aNotification: Notification) {
+//        if let hotKey = hotKey {
+//            UnregisterEventHotKey(hotKey, 0)
+//            let object = Unmanaged.passRetained(hotKey as AnyObject).toOpaque()
+//            object.release()
 //        }
 //    }
 //}

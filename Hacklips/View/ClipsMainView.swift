@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import Cocoa
+import HotKey
 
 struct ClipsMainView: View {    
     @Environment(\.managedObjectContext) var dbContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.pinned, ascending: false), NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
     private var listOfClips: FetchedResults<Clips>
     
     @State private var selectedClip: Clips? = nil
     @State var index: Int = 0
+    let hotkey1 = HotKey(key: .m, modifiers: [.control, .command])
     
     var body: some View {
         NavigationView {
@@ -44,10 +47,24 @@ struct ClipsMainView: View {
                     }
                 }
             }
+
         }.onAppear {
             let watcher = ClipboardWatcher()
             watcher.startWatcher()
+            
+            let pastedText = listOfClips[2].pastedText ?? ""
+            hotkey1.keyDownHandler = keyDownAction(clipText: pastedText)
         }
+    }
+    
+    func keyDownAction(clipText: String) -> () -> () {
+        return {
+            print("global clipText = \(clipText)")
+        }
+    }
+    
+    func doSomething() {
+        print("Do something")
     }
     
     private func setSelectedClip(index:Int) {
@@ -148,8 +165,6 @@ struct RowClip: View {
 
     }
 }
-
-
 
 struct ClipsMainView_Previews: PreviewProvider {
     static var previews: some View {

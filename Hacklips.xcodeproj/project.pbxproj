@@ -21,6 +21,7 @@
 		397E408029B4CF9D006651B8 /* ClipsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E407F29B4CF9D006651B8 /* ClipsMainView.swift */; };
 		397E408629B4D3E4006651B8 /* DetailClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E408529B4D3E4006651B8 /* DetailClipView.swift */; };
 		3988FCD229C0DBE600FA904E /* ExtraViewClipListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3988FCD129C0DBE600FA904E /* ExtraViewClipListView.swift */; };
+		398DA9B929E30A8700D36AC9 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 398DA9B829E30A8700D36AC9 /* HotKey */; };
 		399819AC29D93D5D00148C27 /* Clips+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399819AA29D93D5D00148C27 /* Clips+CoreDataClass.swift */; };
 		399819AD29D93D5D00148C27 /* Clips+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399819AB29D93D5D00148C27 /* Clips+CoreDataProperties.swift */; };
 		39E1522829B627D800419334 /* ClipboardWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E1522729B627D800419334 /* ClipboardWatcher.swift */; };
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				398DA9B929E30A8700D36AC9 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +209,9 @@
 			dependencies = (
 			);
 			name = Hacklips;
+			packageProductDependencies = (
+				398DA9B829E30A8700D36AC9 /* HotKey */,
+			);
 			productName = Hacklips;
 			productReference = 39411DC229B2FCC30066135C /* Hacklips.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 39411DB929B2FCC30066135C;
+			packageReferences = (
+				398DA9B729E30A8700D36AC9 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = 39411DC329B2FCC30066135C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -682,6 +690,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		398DA9B729E30A8700D36AC9 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		398DA9B829E30A8700D36AC9 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398DA9B729E30A8700D36AC9 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		39411DC929B2FCC30066135C /* Hacklips.xcdatamodeld */ = {
