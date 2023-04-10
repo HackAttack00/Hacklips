@@ -16,7 +16,14 @@ struct ClipsMainView: View {
     
     @State private var selectedClip: Clips? = nil
     @State var index: Int = 0
-    let hotkey1 = HotKey(key: .one, modifiers: [.control, .command])
+//    let hotkey1 = HotKey(key: .one, modifiers: [.control, .command])
+//    let hotkey2 = HotKey(key: .two, modifiers: [.control, .command])
+//    let hotkey3 = HotKey(key: .three, modifiers: [.control, .command])
+//    let hotkey4 = HotKey(key: .one, modifiers: [.control, .command])
+//    let hotkey5 = HotKey(key: .one, modifiers: [.control, .command])
+//    let hotkey6 = HotKey(key: .one, modifiers: [.control, .command])
+//    let hotkey7 = HotKey(key: .one, modifiers: [.control, .command])
+    
     
     var body: some View {
         NavigationView {
@@ -34,6 +41,7 @@ struct ClipsMainView: View {
                         RowClip(clip: clip)
                     }
 //                }
+//                let _ = print("navi")
             }
             .toolbar {
                 ToolbarItem {
@@ -51,17 +59,30 @@ struct ClipsMainView: View {
         }.onAppear {
             let watcher = ClipboardWatcher()
             watcher.startWatcher()
-            
-            let pastedText = listOfClips[2].pastedText ?? ""
-            hotkey1.keyDownHandler = keyDownAction(clipText: pastedText)
+//            
+//            let pastedText1 = listOfClips[0].pastedText ?? ""
+//            let pastedText2 = listOfClips[1].pastedText ?? ""
+//            let pastedText3 = listOfClips[2].pastedText ?? ""
+//            hotkey1.keyDownHandler = keyDownAction(clipText: pastedText1)
+//            hotkey2.keyDownHandler = keyDownAction(clipText: pastedText2)
+//            hotkey3.keyDownHandler = keyDownAction(clipText: pastedText3)
         }
+//        .onChange(of: listOfClips) { newValue in
+//            if let clips = newValue {
+//                for clip in clips {
+//                    hotkey1.keyDownHandler = keyDownAction(clipText: clip.pastedText ?? "")
+//                }
+//            }
+//        }
+        
     }
     
-    func keyDownAction(clipText: String) -> () -> () {
-        return {
-            print("global clipText = \(clipText)")
-        }
-    }
+//    func keyDownAction(clipText: String) -> () -> () {
+//        return {
+//            print("global clipText = \(clipText)")
+//            saveClip(clipText: clipText)
+//        }
+//    }
     
     func doSomething() {
         print("Do something")

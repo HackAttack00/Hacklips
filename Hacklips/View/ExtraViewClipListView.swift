@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import HotKey
 
 struct ExtraViewClipListView: View {
     @Environment(\.managedObjectContext) var dbContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Clips.timestamp, ascending: false)], predicate: nil, animation: .default)
     private var listOfClips: FetchedResults<Clips>
+    let hotkeys: [HotKey] = [HotKey(key: .one, modifiers: [.control, .command]),
+                            HotKey(key: .two, modifiers: [.control, .command]),
+                             HotKey(key: .three, modifiers: [.control, .command])]
     
     var body: some View {
         ForEach(listOfClips.indices, id: \.self) { index in
@@ -18,7 +22,18 @@ struct ExtraViewClipListView: View {
             Button(pastedText) {
                 copyToClipBoard(clipText: pastedText)
             }
-            .customShortcut(index: index)
+            .customShortcut(index: index) {
+                if(index < 3) {
+                    self.hotkeys[index].keyDownHandler = keyDownAction(clipText: pastedText)
+                }
+            }
+        }
+    }
+    
+    func keyDownAction(clipText: String) -> () -> () {
+        return {
+            print("global clipText = \(clipText)")
+            copyToClipBoard(clipText: clipText)
         }
     }
     
@@ -46,12 +61,13 @@ struct ExtraViewClipListView: View {
 }
 
 extension View {
-    @ViewBuilder
-    func customShortcut(index: Int) -> some View {
+    
+    func customShortcut(index: Int, action:@escaping ()->()) -> some View {
         if index < 9 {
-            self.keyboardShortcut(KeyEquivalent(Character(String(index+1))))
+            action()
+            return AnyView(self.keyboardShortcut(KeyEquivalent(Character(String(index+1)))))
         } else {
-            self
+            return AnyView(self)
         }
     }
 }
